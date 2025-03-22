@@ -1,0 +1,99 @@
+<html>
+	<head>
+			<style>
+			#main{width: 300px; height: 280px; background-color: black;}
+			input{width: 20% ; height:40px; font-size: 20px;  margin: 6px;}
+			#txtp{width:96%; height: 50px; background-color:silver;}
+			</style>
+	</head>
+	<body>
+		<div id="main">
+			<form name="calcuform">
+				<input type ="text" name="calc" placeholder ="0"id="txtp"><br>
+				<input type = "button" value = "1" onclick= "calcuform.calc.value += 1">
+				<input type = "button" value = "2" onclick= "calcuform.calc.value += 2">
+				<input type = "button" value = "3" onclick= "calcuform.calc.value += 3">
+				<input type = "button" value = "+" onclick=  "addition()"> 
+				<br>
+				<input type = "button" value = "4" onclick= "calcuform.calc.value += 4">
+				<input type = "button" value = "5" onclick= "calcuform.calc.value += 5">
+				<input type = "button" value = "6" onclick= "calcuform.calc.value += 6">
+				<input type = "button" value = "-" onclick= "subtract()"> 
+				<br>
+				<input type = "button" value = "7" onclick= "calcuform.calc.value += 7">
+				<input type = "button" value = "8" onclick= "calcuform.calc.value += 8">
+				<input type = "button" value = "9" onclick= "calcuform.calc.value += 9">
+				<input type = "button" value = "/" onclick= "division()"> 
+				<br>
+				<input type = "button" value = "c" onclick= "calcuform.calc.value = ''">
+				<input type = "button" value = "0" onclick= "calcuform.calc.value += 0">
+				<input type = "button" value = "=" onclick= "calcuform.calc.value = eval(calcuform.calc.value)">
+				<input type = "button" value = "x" onclick= "multiply()"> 
+				<br>
+			</form>
+		</div>
+				<script>
+						function addition(){
+						
+						var act =0, b = 0;
+						
+						act = calcuform.calc.value;
+						
+						b = act.charAt(act.length-1);
+						if(b=='+'|| b=='-' || b=='/' || b=='*'){
+						calcuform.calc.value = act.substring(0,act.length-1);
+						calcuform.calc.value += '+';
+						}else{
+						calcuform.calc.value += '+';
+						}
+				
+						}
+						function subtract(){
+						
+						var act =0, b = 0;
+						
+						act = calcuform.calc.value;
+						
+						b = act.charAt(act.length-1);
+						if(b=='+'|| b=='-' || b=='/' || b=='*'){
+						calcuform.calc.value = act.substring(0,act.length-1);
+						calcuform.calc.value += '-';
+						}else{
+						calcuform.calc.value += '-';
+						}
+				
+						}
+						function division(){
+						
+						var act =0, b = 0;
+						
+						act = calcuform.calc.value;
+						
+						b = act.charAt(act.length-1);
+						if(b=='+'|| b=='-' || b=='/' || b=='*'){
+						calcuform.calc.value = act.substring(0,act.length-1);
+						calcuform.calc.value += '/';
+						}else{
+						calcuform.calc.value += '/';
+						}
+				
+						}
+						function multiply(){
+						
+						var act =0, b = 0;
+						
+						act = calcuform.calc.value;
+						
+						b = act.charAt(act.length-1);
+						if(b=='+'|| b=='-' || b=='/' || b=='*'){
+						calcuform.calc.value = act.substring(0,act.length-1);
+						calcuform.calc.value += '*';
+						}else{
+						calcuform.calc.value += '*';
+						}
+				
+						}
+				</script>
+				
+	</body>
+</html>
